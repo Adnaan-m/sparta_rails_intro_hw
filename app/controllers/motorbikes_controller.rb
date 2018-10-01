@@ -65,13 +65,13 @@ class MotorbikesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_motorbike
-      @motorbike = Motorbike.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_motorbike
+    @motorbike = Motorbike.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def motorbike_params
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def motorbike_params
     params.require(:motorbike).permit(:make,:modelname,:btype,:engine_size)
   end
 

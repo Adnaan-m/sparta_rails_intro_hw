@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
-<h1>About the <%= @motorbike.make %> <%= @motorbike.modelname %></h1>
+<h1 style="color:rgb(30, 111, 125)">About the <%= @motorbike.make %> <%= @motorbike.modelname %></h1>
 <tr>
   <td><%= @motorbike.make %></td>
   <td><%= @motorbike.modelname %></td>
   <td><%= @motorbike.btype %></td>
   <td><%= @motorbike.engine_size %></td>
-<%= link_to 'Edit', edit_motorbike_path(@motorbike) %> |
-<%= link_to 'Back', motorbikes_path %>
-<tr>
+  <%= link_to 'Edit', edit_motorbike_path(@motorbike) %> |
+  <%= link_to 'Back', motorbikes_path %>
+  <tr>
