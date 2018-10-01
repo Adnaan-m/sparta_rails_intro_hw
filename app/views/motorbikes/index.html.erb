@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Motorbikes</h1>
+<h1 style="color:rgb(30, 111, 125)">Motorbikes</h1>
 
 <table>
   <thead>
@@ -11,15 +11,16 @@
 
   <tbody>
     <% @motorbikes.each do |motorbike| %>
-      <tr>
-        <td><%= link_to 'Show', motorbike %></td>
-        <td><%= link_to 'Edit', edit_motorbike_path(motorbike) %></td>
+      <tr style="line-height:30px;letter-spacing:2px;">
+        <td style="padding-right:20px;"><%= motorbike.make %></td>
+        <td style="padding-right:20px;"><%= motorbike.modelname %></td>
+        <td style="padding-right:20px;"><%= motorbike.btype %></td>
+        <td style="padding-right:20px;"><%= motorbike.engine_size %></td>
+        <td style="padding-right:20px;"><%= link_to 'Show', motorbike %></td>
+        <td style="padding-right:20px;"><%= link_to 'Edit', edit_motorbike_path(motorbike) %></td>
         <td><%= link_to 'Destroy', motorbike, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Motorbike', new_motorbike_path %>

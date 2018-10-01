@@ -3,11 +3,11 @@
 one:
   make: MyString
   modelname: MyString
-  type: 
-  engine: 1
+  btype: MyString
+  engine_size: MyString
 
 two:
   make: MyString
   modelname: MyString
-  type: 
-  engine: 1
+  btype: MyString
+  engine_size: MyString

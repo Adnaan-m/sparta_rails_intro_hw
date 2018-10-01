@@ -4,4 +4,8 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
+
+  Motorbike.create(make: 'Yamaha', modelname:'R6', btype:'Super', engine_size:600)
+  Motorbike.create(make: 'Kawsaki', modelname:'H2R', btype:'Super', engine_size:1000)
+  Motorbike.create(make: 'KTM', modelname:'RC8', btype:'Super', engine_size:1180)
