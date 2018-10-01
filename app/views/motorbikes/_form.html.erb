@@ -1,4 +1,21 @@
 <%= form_with(model: motorbike, local: true) do |form| %>
+<div>
+  <%= form.label :make %>
+  <%= form.text_field :make %>
+</div>
+<div>
+  <%= form.label :modelname %>
+  <%= form.text_field :modelname %>
+</div>
+<div>
+  <%= form.label :btype %>
+  <%= form.text_field :btype %>
+</div>
+<div>
+  <%= form.label :engine_size %>
+  <%= form.text_field :engine_size %>
+</div>
+
   <% if motorbike.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(motorbike.errors.count, "error") %> prohibited this motorbike from being saved:</h2>
@@ -9,6 +26,8 @@
       <% end %>
       </ul>
     </div>
+
+
   <% end %>
 
   <div class="actions">

@@ -10,6 +10,7 @@ class MotorbikesController < ApplicationController
   # GET /motorbikes/1
   # GET /motorbikes/1.json
   def show
+    @motorbike = Motorbike.find(params[:id])
   end
 
   # GET /motorbikes/new
@@ -19,6 +20,7 @@ class MotorbikesController < ApplicationController
 
   # GET /motorbikes/1/edit
   def edit
+    @motorbike = Motorbike.find(params[:id])
   end
 
   # POST /motorbikes
@@ -40,6 +42,7 @@ class MotorbikesController < ApplicationController
   # PATCH/PUT /motorbikes/1
   # PATCH/PUT /motorbikes/1.json
   def update
+    @motorbike = Motorbike.find(params[:id])
     respond_to do |format|
       if @motorbike.update(motorbike_params)
         format.html { redirect_to @motorbike, notice: 'Motorbike was successfully updated.' }
@@ -69,6 +72,7 @@ class MotorbikesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def motorbike_params
-      params.fetch(:motorbike, {})
-    end
+    params.require(:motorbike).permit(:make,:modelname,:btype,:engine_size)
+  end
+
 end

@@ -12,10 +12,15 @@
   <tbody>
     <% @motorbikes.each do |motorbike| %>
       <tr>
+        <td><%= motorbike.make %></td>
+        <td><%= motorbike.modelname %></td>
+        <td><%= motorbike.btype %></td>
+        <td><%= motorbike.engine_size %></td>
         <td><%= link_to 'Show', motorbike %></td>
         <td><%= link_to 'Edit', edit_motorbike_path(motorbike) %></td>
         <td><%= link_to 'Destroy', motorbike, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+
     <% end %>
   </tbody>
 </table>
